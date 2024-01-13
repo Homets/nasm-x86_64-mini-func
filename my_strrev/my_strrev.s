@@ -1,16 +1,13 @@
 bits 64
 
-
 section .text
 global my_strrev
-
 
 
 my_strrev:
 
        push rbp           
        mov rbp, rsp
-
 
         mov rax, 0
         mov rcx, 0

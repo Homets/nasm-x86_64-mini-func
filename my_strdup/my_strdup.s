@@ -16,7 +16,6 @@ my_strdup:
 	mov rsi, 0
 	mov rcx, 0 
 	cmp [rdi], byte 0 ;check empty string
-	;jz end
 	jmp _get_strlen
 
 
@@ -38,7 +37,6 @@ _alloc:
   jle _error_malloc
 	pop rdi				
 	pop rsi
-	;mov rsi,rcx			
 	xor rcx,rcx	
 	jmp _strcopy
 
@@ -55,6 +53,7 @@ _end:
 	mov rsp,rbp
 	pop rbp
 	ret
+
 _error_malloc:
 	mov rax, 1
 	mov rsp,rbp
